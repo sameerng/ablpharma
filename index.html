@@ -82,7 +82,229 @@
 
 
     <!-- PAGE CONTENT -->
-    <main>@RenderBody()</main>
+    <main>@{
+    ViewData["Title"] = "Home";
+}
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-6">
+
+                <h1>Abdiel India LifeSciences </h1>
+
+                <h3 class="mt-3">
+                    <span id="typewriter"></span>
+                </h3>
+
+                <p class="mt-4">
+                    Leading manufacturer and distributor of high quality
+                    pharmaceutical products committed to improving healthcare worldwide.
+                </p>
+
+                <a class="btn btn-orange btn-lg mt-3">
+                    Explore Products
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="about-section py-5">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-6">
+
+                @* <img src="/images/pharma-lab.jpg" class="img-fluid rounded shadow"> *@
+                <img src="https://images.pexels.com/photos/356040/pexels-photo-356040.jpeg"
+                     class="img-fluid rounded shadow" />
+
+            </div>
+
+            <div class="col-md-6">
+
+                <h2>About Abdiel Life Sciences</h2>
+
+                <p class="mt-3">
+                    Abdiel Life Sciences is a pharmaceutical manufacturing and
+                    distribution company dedicated to delivering high-quality
+                    healthcare products worldwide.
+                </p>
+
+                <p>
+                    With advanced manufacturing facilities and strict quality
+                    standards, we ensure that every product meets global
+                    healthcare requirements.
+                </p>
+
+                <a class="btn btn-orange mt-3">
+                    Learn More
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="directors-section py-5">
+
+    <div class="container">
+
+        <h2 class="text-center mb-5">Our Leadership</h2>
+
+        <div class="row">
+
+            <!-- Director 1 -->
+            <div class="col-md-3">
+
+                <div class="director-card text-center">
+
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" class="director-photo">
+
+                    <h5>Dr. John Matthews</h5>
+
+                    <p class="director-role">Managing Director</p>
+
+                    <div class="director-info">
+                        20+ Years in Pharma Manufacturing
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Director 2 -->
+            <div class="col-md-3">
+
+                <div class="director-card text-center">
+
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" class="director-photo">
+
+                    <h5>Dr. Sarah Collins</h5>
+
+                    <p class="director-role">Scientific Director</p>
+
+                    <div class="director-info">
+                        PhD Pharmaceutical Sciences
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Director 3 -->
+            <div class="col-md-3">
+
+                <div class="director-card text-center">
+
+                    <img src="https://randomuser.me/api/portraits/men/45.jpg" class="director-photo">
+
+                    <h5>Michael Roberts</h5>
+
+                    <p class="director-role">Operations Director</p>
+
+                    <div class="director-info">
+                        Global Supply Chain Expert
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Director 4 -->
+            <div class="col-md-3">
+
+                <div class="director-card text-center">
+
+                    <img src="https://randomuser.me/api/portraits/men/68.jpg" class="director-photo">
+
+                    <h5>David Wilson</h5>
+
+                    <p class="director-role">Finance Director</p>
+
+                    <div class="director-info">
+                        Corporate Strategy & Finance
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+    const lines = [
+        "Innovating Healthcare",
+        "Precision Pharmaceutical Manufacturing",
+        "Trusted Global Medicine Partner",
+        "Science Driven Healthcare Solutions",
+        "Advancing Global Healthcare",
+        "Committed to Patient Wellbeing",
+        "Science Driven Healthcare Solutions",
+    ];
+
+    let lineIndex = 0;
+    let charIndex = 0;
+
+    function typeWriter() {
+
+        let element = document.getElementById("typewriter");
+
+        if (charIndex < lines[lineIndex].length) {
+
+            element.textContent += lines[lineIndex].charAt(charIndex);
+            charIndex++;
+
+            setTimeout(typeWriter, 80);
+
+        }
+        else {
+
+            setTimeout(function () {
+
+                element.textContent = "";
+                charIndex = 0;
+
+                lineIndex++;
+
+                if (lineIndex >= lines.length) {
+                    lineIndex = 0;
+                }
+
+                typeWriter();
+
+            }, 1500);
+
+        }
+
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        typeWriter();
+    });
+
+</script></main>
 
 
     <!-- FOOTER -->
