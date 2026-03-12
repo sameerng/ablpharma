@@ -326,6 +326,24 @@
     
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+/* INTRO FADE OUT */
+
+        window.onload = function () {
+
+            setTimeout(function () {
+
+                const intro = document.getElementById("intro-screen");
+
+                intro.style.opacity = "0";
+                intro.style.transition = "opacity 1s";
+
+                setTimeout(function () {
+                    intro.style.display = "none";
+                }, 1000);
+
+            }, 2500);
+
+        };
 
         document.getElementById("resetFilters").addEventListener("click", function () {
 
