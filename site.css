@@ -109,7 +109,7 @@ main {
 .hero {
     height: 550px;
     /*background: linear-gradient(rgba(10,31,68,0.8),rgba(10,31,68,0.8)), url("https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80");*/
-   background: linear-gradient(rgba(10,31,68,0.8),rgba(10,31,68,0.8)), url("https://t4.ftcdn.net/jpg/04/10/15/77/360_F_410157798_tj8hwJxbPoHv6qWEIoJKDBF30mHMp9EY.jpg");
+    background: linear-gradient(rgba(10,31,68,0.8),rgba(10,31,68,0.8)), url("https://t4.ftcdn.net/jpg/04/10/15/77/360_F_410157798_tj8hwJxbPoHv6qWEIoJKDBF30mHMp9EY.jpg");
     background-size: cover;
     background-position: center;
     color: white;
