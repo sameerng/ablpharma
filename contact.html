@@ -342,21 +342,5 @@
 
         };
 
-        document.getElementById("resetFilters").addEventListener("click", function () {
-
-            document.getElementById("category").value = "";
-            document.getElementById("subcategory").innerHTML = 
-            "<option> Select Subcategory</option>";
-            document.getElementById("subsubcategory").innerHTML = 
-            "<option> Select Type</option>";
-            document.getElementById("searchProduct").value = "";
-
-            let products = document.querySelectorAll(".product-item");
-
-            products.forEach(function (product) {
-                product.style.display = "block";
-            });
-
-        });
-
+        
     </script>
